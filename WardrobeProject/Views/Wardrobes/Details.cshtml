@@ -11,11 +11,59 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Accessories.AccessoriesID)
+            @Html.DisplayNameFor(model => model.Accessories.Jewelries.JName)
         </dt>
-
         <dd>
-            @Html.DisplayFor(model => model.Accessories.AccessoriesID)
+            @Html.DisplayFor(model => model.Accessories.Jewelries.JName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Accessories.Jewelries.JType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Accessories.Jewelries.JType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Accessories.Jewelries.JMetal)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Accessories.Jewelries.JMetal)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Accessories.Jewelries.JOccasion)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Accessories.Jewelries.JOccasion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Accessories.Hats.HatsName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Accessories.Hats.HatsName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Accessories.Hats.HatsType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Accessories.Hats.HatsType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Accessories.Hats.HatsColor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Accessories.Hats.HatsColor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Accessories.Hats.HatsSeason)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Accessories.Hats.HatsSeason)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Accessories.Hats.HatsOccasion)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Accessories.Hats.HatsOccasion)
         </dd>
 
         <dt>
@@ -25,6 +73,36 @@
         <dd>
             @Html.DisplayFor(model => model.Bottoms.BottomName)
         </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bottoms.BottomType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bottoms.BottomType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bottoms.BottomColor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bottoms.BottomColor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bottoms.BottomSeason)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bottoms.BottomSeason)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bottoms.BottomOccasion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bottoms.BottomOccasion)
+        </dd>
+
+
 
         <dt>
             @Html.DisplayNameFor(model => model.Shoes.ShoesName)
@@ -33,6 +111,36 @@
         <dd>
             @Html.DisplayFor(model => model.Shoes.ShoesName)
         </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Shoes.ShoesType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Shoes.ShoesType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Shoes.ShoesColor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Shoes.ShoesColor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Shoes.ShoesSeason)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Shoes.ShoesSeason)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Shoes.ShoesOccasion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Shoes.ShoesOccasion)
+        </dd>
+
+
 
         <dt>
             @Html.DisplayNameFor(model => model.Tops.TopName)
@@ -41,9 +149,73 @@
         <dd>
             @Html.DisplayFor(model => model.Tops.TopName)
         </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Tops.TopType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tops.TopType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Tops.TopColor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tops.TopColor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Tops.TopSeason)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tops.TopSeason)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Tops.TopOccasion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tops.TopOccasion)
+        </dd>
+
 
     </dl>
 </div>
+<div>
+<dl class="dl-horizontal ">
+    
+
+    <dd>
+        <img src="@Html.DisplayFor(model => model.Accessories.Hats.HatsPhoto)" style="width:100px; height:100px;" />
+    </dd>
+    
+
+    <dd>
+        <img src="@Html.DisplayFor(model => model.Tops.TopPhoto)" style="width:100px; height:100px;" />
+    </dd>
+    
+
+    <dd>
+        <img src="@Html.DisplayFor(model => model.Bottoms.BottomPhoto)" style="width:100px; height:100px;" />
+    </dd>
+    
+
+    <dd>
+        <img src="@Html.DisplayFor(model => model.Shoes.ShoesPhoto)" style="width:100px; height:100px;" />
+    </dd>
+
+
+    
+
+    <dd>
+        <img src="@Html.DisplayFor(model => model.Accessories.Jewelries.JPhoto)" style="width:100px; height:100px;" />
+    </dd>
+    
+
+    
+</dl>
+</div>
+
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.WardrobeID }) |
     @Html.ActionLink("Back to List", "Index")

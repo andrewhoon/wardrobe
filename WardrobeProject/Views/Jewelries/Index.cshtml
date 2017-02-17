@@ -44,7 +44,7 @@
             @Html.DisplayFor(modelItem => item.JOccasion)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.JPhoto)
+            <img src="@Html.DisplayFor(model => item.JPhoto)" style="height:100px; width:100px" />
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.JewelriesID }) |

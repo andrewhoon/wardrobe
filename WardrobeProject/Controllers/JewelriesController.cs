@@ -32,6 +32,12 @@ namespace WardrobeProject.Controllers
             {
                 return HttpNotFound();
             }
+
+            ViewBag.Photo = jewelries.JPhoto;
+
+
+
+
             return View(jewelries);
         }
 
