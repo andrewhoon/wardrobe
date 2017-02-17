@@ -1,0 +1,50 @@
+﻿@model WardrobeProject.Models.Wardrobes
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Wardrobes</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Accessories.AccessoriesID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Accessories.AccessoriesID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bottoms.BottomName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bottoms.BottomName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Shoes.ShoesName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Shoes.ShoesName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tops.TopName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tops.TopName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.WardrobeID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

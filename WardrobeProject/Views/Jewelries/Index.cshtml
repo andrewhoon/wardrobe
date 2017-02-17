@@ -1,0 +1,57 @@
+﻿@model IEnumerable<WardrobeProject.Models.Jewelries>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.JName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JMetal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JOccasion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JPhoto)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.JName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JMetal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JOccasion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JPhoto)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.JewelriesID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.JewelriesID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.JewelriesID })
+        </td>
+    </tr>
+}
+
+</table>

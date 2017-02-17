@@ -1,0 +1,58 @@
+﻿@model WardrobeProject.Models.Jewelries
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Jewelries</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.JName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JMetal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JMetal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JOccasion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JOccasion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JPhoto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JPhoto)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.JewelriesID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

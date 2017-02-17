@@ -1,0 +1,66 @@
+﻿@model WardrobeProject.Models.Hats
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Hats</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HatsName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HatsName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HatsType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HatsType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HatsColor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HatsColor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HatsSeason)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HatsSeason)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HatsOccasion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HatsOccasion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HatsPhoto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HatsPhoto)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.HatsID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

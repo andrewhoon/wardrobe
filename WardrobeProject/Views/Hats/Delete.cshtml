@@ -1,0 +1,72 @@
+﻿@model WardrobeProject.Models.Hats
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Hats</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HatsName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HatsName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HatsType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HatsType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HatsColor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HatsColor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HatsSeason)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HatsSeason)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HatsOccasion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HatsOccasion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HatsPhoto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HatsPhoto)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

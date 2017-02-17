@@ -1,0 +1,56 @@
+﻿@model WardrobeProject.Models.Wardrobes
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Wardrobes</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Accessories.AccessoriesID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Accessories.AccessoriesID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bottoms.BottomName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bottoms.BottomName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Shoes.ShoesName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Shoes.ShoesName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tops.TopName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tops.TopName)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

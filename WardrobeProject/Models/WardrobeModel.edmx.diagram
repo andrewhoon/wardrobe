@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5caecf164803471c99b8c41f0e9ef8ae" Name="Diagram1">
+        <EntityTypeShape EntityType="WardrobeProjectModel.Accessories" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WardrobeProjectModel.Bottoms" Width="1.5" PointX="3" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WardrobeProjectModel.Hats" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="WardrobeProjectModel.Jewelries" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="WardrobeProjectModel.Shoes" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="WardrobeProjectModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WardrobeProjectModel.Tops" Width="1.5" PointX="3" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WardrobeProjectModel.Wardrobes" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="WardrobeProjectModel.FK_Accessories_Hats" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeProjectModel.FK_Accessories_Jewelries" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeProjectModel.FK_Wardrobes_Accessories" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeProjectModel.FK_Wardrobes_Bottoms" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeProjectModel.FK_Wardrobes_Shoes" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeProjectModel.FK_Wardrobes_Tops" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

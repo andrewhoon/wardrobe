@@ -1,0 +1,63 @@
+﻿@model IEnumerable<WardrobeProject.Models.Hats>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.HatsName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HatsType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HatsColor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HatsSeason)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HatsOccasion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HatsPhoto)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.HatsName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HatsType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HatsColor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HatsSeason)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HatsOccasion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HatsPhoto)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.HatsID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.HatsID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.HatsID })
+        </td>
+    </tr>
+}
+
+</table>
