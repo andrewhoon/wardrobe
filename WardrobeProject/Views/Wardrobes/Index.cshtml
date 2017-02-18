@@ -3,13 +3,46 @@
 @{
     ViewBag.Title = "Index";
 }
-
-<h2>Index</h2>
+<body id="wardrobeindexbody">
+<div class="jumbotron">
+    <div class="container-fluid">
+        <h2 id="wardrobedisplayheader">Pre-made Outfits</h2>
+    </div>
+</div>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    <button type="button" id="createbutton">@Html.ActionLink("Create New", "Create")</button> 
 </p>
-<table class="table">
+
+<div class="row">
+@foreach (var item in Model)
+{
+    <div class="col-md-4">
+        <div class="thumbnail" id="wardrobeindex">
+            <div class="caption">
+                <h2 id="windexheader">Outfit #@Html.DisplayFor(modelItem => item.WardrobeID)</h2>
+                <div id="itemdetails">
+                <p>@Html.DisplayFor(modelItem => item.Accessories.Hats.HatsName)</p>
+                <p>@Html.DisplayFor(modelItem => item.Tops.TopName)</p>
+                <p>@Html.DisplayFor(modelItem => item.Bottoms.BottomName)</p>
+                <p>@Html.DisplayFor(modelItem => item.Shoes.ShoesName)</p>
+                <p>@Html.DisplayFor(modelItem => item.Accessories.Jewelries.JName)</p>
+                    @Html.ActionLink("Details", "Details", new { id = item.WardrobeID }, new { @class = "btn btn-success", role = "button" }) <!--These three will get their own buttons-->
+                    @Html.ActionLink("Edit", "Edit", new { id = item.WardrobeID }, new { @class = "btn btn-primary", role = "button" })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.WardrobeID }, new { @class = "btn btn-danger", role = "button" })
+                </div>
+            </div>
+        </div>
+    </div>
+}
+</div>
+    </body>
+
+
+
+
+
+@*<table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Accessories.AccessoriesID)
@@ -48,4 +81,4 @@
     </tr>
 }
 
-</table>
+</table>*@
