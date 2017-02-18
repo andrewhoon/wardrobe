@@ -22,3 +22,52 @@ select,
 textarea {
     max-width: 280px;
 }
+.thumbnail{
+    height:540px;
+    background-color:#004641;
+    border:10px;
+    border-style:solid;
+    border-color:#531722;
+}
+ #Outfit{
+     height:700px;
+     color:white;
+     margin:auto;
+ }
+#wardrobephotos {
+    width: 100px;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.jumbotron {
+    background-size: 100% 100%;
+    background-image: url('Photos/ClothesPano.jpg');
+    height:280px;
+    color:white;
+    text-align:center;
+    border:10px;
+    border-style:solid;
+    border-color:#005265;
+}
+#WardrobeDetails{
+    background-color:#31092B;
+}
+#displayrow{
+    text-align:center;
+    color:white;
+    font-family:cursive;
+    font-size:40px;
+}
+#wardrobeinfo{
+    text-align:center;
+    color:white;
+    font-family:cursive;
+    font-size:17px;
+
+}
+#wardrobedisplayheader{
+    font-size:70px;
+    font-family:cursive;
+}
