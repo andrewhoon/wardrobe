@@ -11,7 +11,8 @@ namespace WardrobeProject.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Jewelries
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,9 +22,13 @@ namespace WardrobeProject.Models
         }
     
         public int JewelriesID { get; set; }
+        [Display(Name = "Jewelry Name")]
         public string JName { get; set; }
+        [Display(Name = "Jewelry Type")]
         public string JType { get; set; }
+        [Display(Name = "Metal")]
         public string JMetal { get; set; }
+        [Display(Name = "Occasion")]
         public string JOccasion { get; set; }
         public string JPhoto { get; set; }
     

@@ -8,7 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using WardrobeProject.Models;
 
-namespace WardrobeProject.Controllers
+namespace WardrobeProject.Controllers   //i did not have to edit any of this
 {
     public class BottomsController : Controller
     {

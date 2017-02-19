@@ -214,6 +214,8 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Photos\closetPano.JPG" />
+    <Content Include="Content\Photos\fancyCloset.jpeg" />
     <Content Include="Content\Photos\Hatspano.JPG" />
     <Content Include="Content\Photos\ironman1.JPG" />
     <Content Include="Content\Photos\ClothesPano.jpg" />

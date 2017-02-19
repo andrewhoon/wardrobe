@@ -4,21 +4,21 @@
     ViewBag.Title = "Index";
 }
 
-<body id="topindexbody">
-    <div class="jumbotron" id="topsjumbotron">
+<body id="topindexbody">    <!--This view is for tops index. All other indexes were worked similar, with just some styling differences-->
+    <div class="jumbotron" id="topsjumbotron"> <!--jumbotron within each primary key is the same, although each primary key got their own photos and styling-->
         <div class="container-fluid">
             <h2 id="topdisplayheader">Available Tops</h2>
         </div>
     </div>
 
     <p>
-        <button type="button" id="createbutton">@Html.ActionLink("Create New", "Create")</button>
+        <button type="button" id="createbutton">@Html.ActionLink("Create New", "Create")</button><!--button to create new one, styled in CSS-->
     </p>
 
-    <div class="row">
+    <div class="row"> <!--ran a loop to show each item that has already been entered-->
         @foreach (var item in Model)
         {
-            <div class="col-md-4">
+            <div class="col-md-4">  <!--Photo of each item is displayed in the "Details" view only (also in wardrobe) -->
                 <div class="thumbnail" id="wardrobeindex">
                     <div class="caption">
                         <h2 id="windexheader">Top #@Html.DisplayFor(modelItem => item.TopID)</h2>

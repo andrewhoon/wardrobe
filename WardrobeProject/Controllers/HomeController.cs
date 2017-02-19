@@ -26,5 +26,10 @@ namespace WardrobeProject.Controllers
 
             return View();
         }
+        public ActionResult Wardrobe()
+        {
+            ViewBag.Message = "Your wardrobe page.";
+            return View();
+        }
     }
 }

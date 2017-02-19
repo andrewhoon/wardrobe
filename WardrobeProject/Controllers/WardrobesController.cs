@@ -15,7 +15,7 @@ namespace WardrobeProject.Controllers
         private WardrobeProjectEntities db = new WardrobeProjectEntities();
 
         // GET: Wardrobes
-        public ActionResult Index()
+        public ActionResult Index() //In the var wardrobes I had to include all my keys to get them to go into the view
         {
             var wardrobes = db.Wardrobes.Include(w => w.Accessories.Jewelries).Include(w => w.Accessories.Hats).Include(w => w.Bottoms).Include(w => w.Shoes).Include(w => w.Tops);
             return View(wardrobes.ToList());

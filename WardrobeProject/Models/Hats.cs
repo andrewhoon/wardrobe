@@ -11,7 +11,8 @@ namespace WardrobeProject.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Hats
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,10 +22,15 @@ namespace WardrobeProject.Models
         }
     
         public int HatsID { get; set; }
+        [Display(Name = "Hat Name")]
         public string HatsName { get; set; }
+        [Display(Name = "Hat Type")]
         public string HatsType { get; set; }
+        [Display(Name = "Color")]
         public string HatsColor { get; set; }
+        [Display(Name = "Season")]
         public string HatsSeason { get; set; }
+        [Display(Name = "Occasion")]
         public string HatsOccasion { get; set; }
         public string HatsPhoto { get; set; }
     

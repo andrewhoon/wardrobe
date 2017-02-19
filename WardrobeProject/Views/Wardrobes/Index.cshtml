@@ -3,19 +3,20 @@
 @{
     ViewBag.Title = "Index";
 }
-<body id="wardrobeindexbody">
-<div class="jumbotron">
+<!--Wardrobes views ended up being different than my other Key Views  It contains all the data of each view.-->
+<body id="wardrobeindexbody">  <!--I set IDs for each because each key views are different--> 
+<div class="jumbotron"> <!--jumbotron-->
     <div class="container-fluid">
         <h2 id="wardrobedisplayheader">Pre-made Outfits</h2>
     </div>
 </div>
 
 <p>
-    <button type="button" id="createbutton">@Html.ActionLink("Create New", "Create")</button> 
+    <button type="button" id="createbutton">@Html.ActionLink("Create New", "Create")</button>  <!--to create whole wardrobe from existing data-->
 </p>
 
-<div class="row">
-@foreach (var item in Model)
+<div class="row"> <!--loop run to display each entry-->
+@foreach (var item in Model)  
 {
     <div class="col-md-4">
         <div class="thumbnail" id="wardrobeindex">

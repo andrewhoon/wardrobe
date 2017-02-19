@@ -8,21 +8,27 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
+    <!--Navbar for entire app-->
     <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+        <div class="container" id="navvy">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <!--this will give us the button on a narrower screen-->
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Andy's Wardrobe Home", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" }) <!--this will bring the user back to the homepage-->
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <!--these buttons go to their respective primary key index pages-->
+                    <li>@Html.ActionLink("Wardrobe", "Index", "Wardrobes")</li>
+                    <li>@Html.ActionLink("Tops", "Index", "Tops")</li>
+                    <li>@Html.ActionLink("Bottoms", "Index", "Bottoms")</li>
+                    <li>@Html.ActionLink("Shoes", "Index", "Shoes")</li>
+                    <li>@Html.ActionLink("Jewelries", "Index", "Jewelries")</li>
+                    <li>@Html.ActionLink("Hats", "Index", "Hats")</li>
+                    <li>@Html.ActionLink("Accessories", "Index", "Accessories")</li>
                 </ul>
             </div>
         </div>
@@ -30,13 +36,23 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+        </div>
+        <footer class="page-footer blue center-on-small-only" id="footy">
+            <!--Footer-->
+            <div class="container-fluid">
+                <div class="row">
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+                    <!--only column-->
+                    <div class="col-md-6">
+                        <h4 class="title">Thank You</h4>
+                        <p>Please visit again. Copyright @DateTime.Now.Year</p>
+                    </div>
+                </div>
+                </div>
+                </footer>
+
+                @Scripts.Render("~/bundles/jquery")
+                @Scripts.Render("~/bundles/bootstrap")
+                @RenderSection("scripts", required: false)
 </body>
 </html>

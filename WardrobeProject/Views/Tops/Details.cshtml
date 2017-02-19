@@ -3,14 +3,14 @@
 @{
     ViewBag.Title = "Details";
 }
-<body id="topsdetailsbody">
-    <div class="jumbotron" id="topsjumbotron">
+<body id="topsdetailsbody"> <!--each details page for each primary key is very similar in html. differences are in photos and styling via CSS-->
+    <div class="jumbotron" id="topsjumbotron"><!--same jumbotron as matching index view for each primary key-->
         <div class="container-fluid">
             <h2 id="topdisplayheader">Top Details</h2>
         </div>
     </div>
 
-    <div class="row">
+    <div class="row"> <!--this row displays all the vital info for the selected item-->
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="thumbnail">
                 <div class="caption">
@@ -57,14 +57,14 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row"> <!--this row displays the photo of the selected item-->
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="thumbnail">
                 <div class="caption">
                     <img src="@Html.DisplayFor(model => model.TopPhoto)" style="width:315px; height:100%;" id="wardrobephotos" />
                 </div>
                 @Html.ActionLink("Edit", "Edit", new { id = Model.TopID }, new { @class = "btn btn-primary", role = "button" })
-                <button type="button">@Html.ActionLink("Back to List", "Index")</button>
+                <button type="button">@Html.ActionLink("Back to List", "Index")</button> <!--these buttons are to edit or go back to list-->
             </div>
         </div>
     </div>

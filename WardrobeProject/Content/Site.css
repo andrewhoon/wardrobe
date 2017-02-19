@@ -22,6 +22,7 @@ select,
 textarea {
     max-width: 280px;
 }
+/*This works for all thumbnails throughout views*/
 .thumbnail{
     height:540px;
     background-color:#004641;
@@ -29,11 +30,13 @@ textarea {
     border-style:solid;
     border-color:#531722;
 }
+/*this enlarges the total outfit row in the details for wardrobe*/
  #Outfit{
      height:700px;
      color:white;
      margin:auto;
  }
+ /*photos in wardrobe detail view*/
 #wardrobephotos {
     width: 100px;
     align-self: center;
@@ -41,6 +44,7 @@ textarea {
     margin-right: auto;
     display: block;
 }
+/*default jumbotron info. some of these are replaced later is css*/
 .jumbotron {
     background-size: 100% 100%;
     background-image: url('Photos/ClothesPano.jpg');
@@ -51,6 +55,7 @@ textarea {
     border-style:solid;
     border-color:#005265;
 }
+/*next several css entries are for wardrobe views*/
 #WardrobeDetails{
     background-color:#31092B;
 }
@@ -77,18 +82,21 @@ textarea {
     font-size:48px;
     font-family:cursive;
 }
+/*this ended up being used throughout project, not just wardrobe views*/
 #itemdetails{
     color:white;
     text-align:center;
     font-size:24px;
     font-family:cursive;
 }
+/*same with this. also used thoughout*/
 #createbutton{
     background-color:lightskyblue;
 }
 #wardrobeindexbody{
     background-color:#C3B61A;
 }
+/*this is the beginning of the Tops views*/
 #topsjumbotron {
     background-size: 100% 100%;
     height: 350px;
@@ -110,6 +118,7 @@ textarea {
     background-image: url('Photos/suitjacketphoto.jpg');
     background-repeat:no-repeat;
 }
+/*this is the beginning of the bottoms views*/
 #bottomsjumbotron {
     background-size: 100% 100%;
     height: 350px;
@@ -127,6 +136,7 @@ textarea {
 #bottomdisplayheader{
     font-size:70px;
 }
+/*shoes views*/
 #shoesjumbotron {
     background-size: 100% 100%;
     height: 350px;
@@ -145,6 +155,7 @@ textarea {
 #shoesdisplayheader{
     font-size:70px;
 }
+/*hats views*/
 #hatsjumbotron {
     background-size: 100% 100%;
     height: 350px;
@@ -163,6 +174,7 @@ textarea {
 #hatsdisplayheader{
     font-size:70px;
 }
+/*jewelries views  (sidenote, "jewelries" is a tough name to keep spelling out, in the future i'll consider names carefully) */
 #jewelsjumbotron {
     background-size: 100% 100%;
     height: 370px;
@@ -181,6 +193,7 @@ textarea {
 #jewelsdisplayheader{
     font-size:70px;
 }
+/*Accesories Views*/
 #directions{
     color:white;
     font-size:16px;
@@ -216,4 +229,49 @@ textarea {
 }
 #accessthumbnail{
     height:700px;
+}
+/*Home Index View*/
+#homejumbotron {
+    background-size: 100% 100%;
+    height: 310px;
+    background-image: url('Photos/closetPano.JPG');
+    color: white;
+    text-align: center;
+    border: 10px;
+    border-style: solid;
+    border-color: #F6F6F6;
+}
+#homebody {
+    background-image: url('Photos/fancyCloset.jpeg');
+}
+#homethumbnail{
+    background-color:#D4A684;
+    color:#DDD9CD;
+    border:10px;
+    border-style:solid;
+    border-color:#DDD9CD;
+}
+#homep{
+    color:white;
+    font-size:40px;
+    text-align:center;
+    font-family:cursive;
+}
+/*Navbar*/
+#navvy{
+    background-color:darkblue;
+    color:yellow;
+    font-size:18px;
+}
+/*Footer*/
+#footy{
+    background-color:darkblue;
+    color:yellow;
+    font-size:18px;
+}
+/*This is for styling buttons on home page to access rest of app*/
+#homebutton{
+    background-color:black;
+    color:yellow;
+    font-size:28px;
 }

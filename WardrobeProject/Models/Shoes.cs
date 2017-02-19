@@ -11,7 +11,8 @@ namespace WardrobeProject.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Shoes
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,10 +22,15 @@ namespace WardrobeProject.Models
         }
     
         public int ShoesID { get; set; }
+        [Display(Name = "Shoes Name")]
         public string ShoesName { get; set; }
+        [Display(Name = "Shoes Type")]
         public string ShoesType { get; set; }
+        [Display(Name = "Color")]
         public string ShoesColor { get; set; }
+        [Display(Name = "Season")]
         public string ShoesSeason { get; set; }
+        [Display(Name = "Occasion")]
         public string ShoesOccasion { get; set; }
         public string ShoesPhoto { get; set; }
     
