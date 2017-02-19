@@ -4,63 +4,73 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<body id="bottomindexbody">
+    <div class="jumbotron" id="bottomsjumbotron">
+        <div class="container-fluid">
+            <h2 id="bottomdisplayheader">Bottom Details</h2>
+        </div>
+    </div>
 
-<div>
-    <h4>Bottoms</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.BottomName)
-        </dt>
+    <p>
+        <button type="button" id="createbutton">@Html.ActionLink("Create New", "Create")</button>
+    </p>
 
-        <dd>
-            @Html.DisplayFor(model => model.BottomName)
-        </dd>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h3 id="displayrow">Bottom</h3>
+                    <dl class="dl-horizontal" id="wardrobeinfo">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.BottomName)
+                        </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.BottomType)
-        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.BottomName)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.BottomType)
+                        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.BottomType)
-        </dd>
+                        <dd>
+                            @Html.DisplayFor(model => model.BottomType)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.BottomColor)
+                        </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.BottomColor)
-        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.BottomColor)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.BottomSeason)
+                        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.BottomColor)
-        </dd>
+                        <dd>
+                            @Html.DisplayFor(model => model.BottomSeason)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.BottomOccasion)
+                        </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.BottomSeason)
-        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.BottomOccasion)
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.BottomSeason)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.BottomOccasion)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.BottomOccasion)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.BottomPhoto)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.BottomPhoto)
-        </dd>
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.BottomID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="thumbnail">
+                <div class="caption">
+                    <img src="@Html.DisplayFor(model => model.BottomPhoto)" style="width:315px; height:100%;" id="wardrobephotos" />
+                </div>
+                @Html.ActionLink("Edit", "Edit", new { id = Model.BottomID }, new { @class = "btn btn-primary", role = "button" })
+                <button type="button">@Html.ActionLink("Back to List", "Index")</button>
+            </div>
+        </div>
+    </div>
+</body>

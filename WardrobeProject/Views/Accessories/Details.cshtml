@@ -4,31 +4,63 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<body id="accessindexbody">
+    <div class="jumbotron" id="accessjumbotron">
+        <div class="container-fluid">
+            <h2 id="accessdisplayheader">Accessories Details</h2>
+        </div>
+    </div>
 
-<div>
-    <h4>Accessories</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Hats.HatsName)
-        </dt>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h3 id="displayrow">Accessories</h3>
+                    <dl class="dl-horizontal" id="wardrobeinfo">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Jewelries.JName)
+                        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Hats.HatsName)
-        </dd>
+                        <dd>
+                            @Html.DisplayFor(model => model.Jewelries.JName)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Jewelries.JType)
+                        </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Jewelries.JName)
-        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.Jewelries.JType)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Hats.HatsName)
+                        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Jewelries.JName)
-        </dd>
+                        <dd>
+                            @Html.DisplayFor(model => model.Hats.HatsName)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Hats.HatsType)
+                        </dt>
 
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.AccessoriesID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+                        <dd>
+                            @Html.DisplayFor(model => model.Hats.HatsType)
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="thumbnail" id="accessthumbnail">
+                <div class="caption">
+                    <img src="@Html.DisplayFor(model => model.Jewelries.JPhoto)" style="width:315px; height:100%;" id="wardrobephotos" />
+                    <img src="@Html.DisplayFor(model => model.Hats.HatsPhoto)" style="width:315px; height:100%;" id="wardrobephotos" />
+                </div>
+                @Html.ActionLink("Edit", "Edit", new { id = Model.AccessoriesID }, new { @class = "btn btn-primary", role = "button" })
+                <button type="button">@Html.ActionLink("Back to List", "Index")</button>
+            </div>
+        </div>
+    </div>
+</body>
