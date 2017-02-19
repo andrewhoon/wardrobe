@@ -4,60 +4,39 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<body id="topindexbody">
+    <div class="jumbotron" id="topsjumbotron">
+        <div class="container-fluid">
+            <h2 id="topdisplayheader">Available Tops</h2>
+        </div>
+    </div>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.TopName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TopType)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TopColor)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TopSeason)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TopOccasion)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TopPhoto)
-        </th>
-        <th></th>
-    </tr>
+    <p>
+        <button type="button" id="createbutton">@Html.ActionLink("Create New", "Create")</button>
+    </p>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.TopName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TopType)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TopColor)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TopSeason)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TopOccasion)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TopPhoto)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.TopID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.TopID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.TopID })
-        </td>
-    </tr>
-}
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail" id="wardrobeindex">
+                    <div class="caption">
+                        <h2 id="windexheader">Top #@Html.DisplayFor(modelItem => item.TopID)</h2>
+                        <div id="itemdetails">
+                            <p>@Html.DisplayFor(modelItem => item.TopName)</p>
+                            <p>@Html.DisplayFor(modelItem => item.TopType)</p>
+                            <p>@Html.DisplayFor(modelItem => item.TopColor)</p>
+                            <p>@Html.DisplayFor(modelItem => item.TopSeason)</p>
+                            <p>@Html.DisplayFor(modelItem => item.TopOccasion)</p>
+                            @Html.ActionLink("Details", "Details", new { id = item.TopID }, new { @class = "btn btn-success", role = "button" }) <!--These three will get their own buttons-->
+                            @Html.ActionLink("Edit", "Edit", new { id = item.TopID }, new { @class = "btn btn-primary", role = "button" })
+                            @Html.ActionLink("Delete", "Delete", new { id = item.TopID }, new { @class = "btn btn-danger", role = "button" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</body>
 
-</table>
+

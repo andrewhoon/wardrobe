@@ -4,60 +4,38 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<body id="shoesindexbody">
+    <div class="jumbotron" id="shoesjumbotron">
+        <div class="container-fluid">
+            <h2 id="shoesdisplayheader">Available Shoes</h2>
+        </div>
+    </div>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.ShoesName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ShoesType)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ShoesColor)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ShoesSeason)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ShoesOccasion)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ShoesPhoto)
-        </th>
-        <th></th>
-    </tr>
+    <p>
+        <button type="button" id="createbutton">@Html.ActionLink("Create New", "Create")</button>
+    </p>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.ShoesName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ShoesType)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ShoesColor)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ShoesSeason)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ShoesOccasion)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ShoesPhoto)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ShoesID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ShoesID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ShoesID })
-        </td>
-    </tr>
-}
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail" id="wardrobeindex">
+                    <div class="caption">
+                        <h2 id="windexheader">Shoes #@Html.DisplayFor(modelItem => item.ShoesID)</h2>
+                        <div id="itemdetails">
+                            <p>@Html.DisplayFor(modelItem => item.ShoesName)</p>
+                            <p>@Html.DisplayFor(modelItem => item.ShoesType)</p>
+                            <p>@Html.DisplayFor(modelItem => item.ShoesColor)</p>
+                            <p>@Html.DisplayFor(modelItem => item.ShoesSeason)</p>
+                            <p>@Html.DisplayFor(modelItem => item.ShoesOccasion)</p>
+                            @Html.ActionLink("Details", "Details", new { id = item.ShoesID }, new { @class = "btn btn-success", role = "button" }) <!--These three will get their own buttons-->
+                            @Html.ActionLink("Edit", "Edit", new { id = item.ShoesID }, new { @class = "btn btn-primary", role = "button" })
+                            @Html.ActionLink("Delete", "Delete", new { id = item.ShoesID }, new { @class = "btn btn-danger", role = "button" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</body>
 
-</table>

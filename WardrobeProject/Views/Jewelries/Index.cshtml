@@ -4,54 +4,36 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<body id="jewelsindexbody">
+    <div class="jumbotron" id="jewelsjumbotron">
+        <div class="container-fluid">
+            <h2 id="jewelsdisplayheader">Available Jewelry</h2>
+        </div>
+    </div>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.JName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.JType)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.JMetal)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.JOccasion)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.JPhoto)
-        </th>
-        <th></th>
-    </tr>
+    <p>
+        <button type="button" id="createbutton">@Html.ActionLink("Create New", "Create")</button>
+    </p>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.JName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.JType)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.JMetal)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.JOccasion)
-        </td>
-        <td>
-            <img src="@Html.DisplayFor(model => item.JPhoto)" style="height:100px; width:100px" />
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.JewelriesID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.JewelriesID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.JewelriesID })
-        </td>
-    </tr>
-}
-
-</table>
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail" id="wardrobeindex">
+                    <div class="caption">
+                        <h2 id="windexheader">Jewelry #@Html.DisplayFor(modelItem => item.JewelriesID)</h2>
+                        <div id="itemdetails">
+                            <p>@Html.DisplayFor(modelItem => item.JName)</p>
+                            <p>@Html.DisplayFor(modelItem => item.JType)</p>
+                            <p>@Html.DisplayFor(modelItem => item.JMetal)</p>
+                            <p>@Html.DisplayFor(modelItem => item.JOccasion)</p>
+                            @Html.ActionLink("Details", "Details", new { id = item.JewelriesID }, new { @class = "btn btn-success", role = "button" }) <!--These three will get their own buttons-->
+                            @Html.ActionLink("Edit", "Edit", new { id = item.JewelriesID }, new { @class = "btn btn-primary", role = "button" })
+                            @Html.ActionLink("Delete", "Delete", new { id = item.JewelriesID }, new { @class = "btn btn-danger", role = "button" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</body>

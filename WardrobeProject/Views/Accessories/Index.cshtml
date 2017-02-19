@@ -4,7 +4,44 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<body id="accessindexbody">
+    <div class="jumbotron" id="accessjumbotron">
+        <div class="container-fluid">
+            <h2 id="accessdisplayheader">Pick Your Accessories!</h2>
+        </div>
+    </div>
+
+    <p>
+        <button type="button" id="createbutton">@Html.ActionLink("Create New", "Create")</button>
+    </p>
+
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail" id="wardrobeindex">
+                    <div class="caption">
+                        <h2 id="aindexheader">Accessories #@Html.DisplayFor(modelItem => item.AccessoriesID)</h2>
+                        <p id="directions">Please remember your accessories number when adding to your outfit!</p>
+                        <div id="itemdetails">
+                            <p id="accesstype">Jewelry</p>
+                            <p>@Html.DisplayFor(modelItem => item.Jewelries.JName)</p>
+                            <p>@Html.DisplayFor(modelItem => item.Jewelries.JType)</p>
+                            <p id="accesstype">Hat</p>
+                            <p>@Html.DisplayFor(modelItem => item.Hats.HatsName)</p>
+                            <p>@Html.DisplayFor(modelItem => item.Hats.HatsType)</p>
+                            @Html.ActionLink("Details", "Details", new { id = item.AccessoriesID }, new { @class = "btn btn-success", role = "button" }) <!--These three will get their own buttons-->
+                            @Html.ActionLink("Edit", "Edit", new { id = item.AccessoriesID }, new { @class = "btn btn-primary", role = "button" })
+                            @Html.ActionLink("Delete", "Delete", new { id = item.AccessoriesID }, new { @class = "btn btn-danger", role = "button" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</body>
+
+@*<h2>Index</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -36,4 +73,4 @@
     </tr>
 }
 
-</table>
+</table>*@

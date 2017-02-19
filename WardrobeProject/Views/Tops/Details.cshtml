@@ -3,64 +3,72 @@
 @{
     ViewBag.Title = "Details";
 }
+<body id="topsdetailsbody">
+    <div class="jumbotron" id="topsjumbotron">
+        <div class="container-fluid">
+            <h2 id="topdisplayheader">Top Details</h2>
+        </div>
+    </div>
 
-<h2>Details</h2>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h3 id="displayrow">Top</h3>
+                    <dl class="dl-horizontal" id="wardrobeinfo">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.TopName)
+                        </dt>
 
-<div>
-    <h4>Tops</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.TopName)
-        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.TopName)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.TopType)
+                        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.TopName)
-        </dd>
+                        <dd>
+                            @Html.DisplayFor(model => model.TopType)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.TopColor)
+                        </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.TopType)
-        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.TopColor)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.TopSeason)
+                        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.TopType)
-        </dd>
+                        <dd>
+                            @Html.DisplayFor(model => model.TopSeason)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.TopOccasion)
+                        </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.TopColor)
-        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.TopOccasion)
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.TopColor)
-        </dd>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="thumbnail">
+                <div class="caption">
+                    <img src="@Html.DisplayFor(model => model.TopPhoto)" style="width:315px; height:100%;" id="wardrobephotos" />
+                </div>
+                @Html.ActionLink("Edit", "Edit", new { id = Model.TopID }, new { @class = "btn btn-primary", role = "button" })
+                <button type="button">@Html.ActionLink("Back to List", "Index")</button>
+            </div>
+        </div>
+    </div>
+</body>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.TopSeason)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.TopSeason)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.TopOccasion)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TopOccasion)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.TopPhoto)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TopPhoto)
-        </dd>
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.TopID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+              

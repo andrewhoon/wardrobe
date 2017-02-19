@@ -80,7 +80,7 @@ textarea {
 #itemdetails{
     color:white;
     text-align:center;
-    font-size:20px;
+    font-size:24px;
     font-family:cursive;
 }
 #createbutton{
@@ -88,4 +88,129 @@ textarea {
 }
 #wardrobeindexbody{
     background-color:#C3B61A;
+}
+#topsjumbotron {
+    background-size: 100% 100%;
+    height: 350px;
+    background-image: url('Photos/outdoorpic.jpg');
+    color:white;
+    text-align:center;
+    border:10px;
+    border-style:solid;
+    border-color:#394610;
+}
+#topdisplayheader{
+    font-size:70px;
+}
+#topindexbody {
+    background-image: url('Photos/largetshirt.jpg'); 
+    background-repeat:no-repeat;
+}
+#topsdetailsbody {
+    background-image: url('Photos/suitjacketphoto.jpg');
+    background-repeat:no-repeat;
+}
+#bottomsjumbotron {
+    background-size: 100% 100%;
+    height: 350px;
+    background-image: url('Photos/captainamerica.JPG');
+    color: whitesmoke;
+    text-align: center;
+    border: 10px;
+    border-style: solid;
+    border-color: #CCDBC8;
+}
+#bottomindexbody {
+    background-image: url('Photos/pantsphoto.jpg');
+    width:115%;
+}
+#bottomdisplayheader{
+    font-size:70px;
+}
+#shoesjumbotron {
+    background-size: 100% 100%;
+    height: 350px;
+    background-image: url('Photos/MJGoldShoes.jpg');
+    color: whitesmoke;
+    text-align: center;
+    border: 10px;
+    border-style: solid;
+    border-color: #C59D6C;
+}
+#shoesindexbody {
+    background-image: url('Photos/someShoes.jpg');
+    background-repeat:no-repeat;
+    background-position:center;
+}
+#shoesdisplayheader{
+    font-size:70px;
+}
+#hatsjumbotron {
+    background-size: 100% 100%;
+    height: 350px;
+    background-image: url('Photos/Hatspano.JPG');
+    color: white;
+    text-align: center;
+    border: 10px;
+    border-style: solid;
+    border-color: #C8D44B;
+}
+#hatsindexbody {
+    background-image: url('Photos/largeHat.jpg');
+    background-repeat: no-repeat;
+    background-position:center;
+}
+#hatsdisplayheader{
+    font-size:70px;
+}
+#jewelsjumbotron {
+    background-size: 100% 100%;
+    height: 370px;
+    background-image: url('Photos/panoramicCleveland.jpg');
+    color: white;
+    text-align: center;
+    border: 10px;
+    border-style: solid;
+    border-color: #DC0C48;
+}
+#jewelsindexbody {
+    background-image: url('Photos/largejewelry.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#jewelsdisplayheader{
+    font-size:70px;
+}
+#directions{
+    color:white;
+    font-size:16px;
+    font-family:cursive;
+}
+#accesstype{
+    color:red;
+    font-size:25px;
+    font-family:cursive;
+    text-decoration:underline;
+}
+#accessjumbotron {
+    background-size: 100% 100%;
+    height: 370px;
+    background-image: url('Photos/panoramicCleveland.jpg');
+    color: white;
+    text-align: center;
+    border: 10px;
+    border-style: solid;
+    border-color: #F6F6F6;
+}
+#accessindexbody {
+    background-color:#003398;
+}
+#accessdisplayheader{
+    font-size:70px;
+}
+#aindexheader{
+    color:white;
+    text-align:center;
+    font-size:44px;
+    font-family:cursive;
 }
